@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Gestor de Cuentas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contenedor">
+    <ion-img src="assets/img/money.png" alt="Gestor de Cuentas"></ion-img>
+
+    <h2>Bienvenido a tu Gestor Financiero</h2>
+    <p>Esta aplicación te permite registrar, consultar y administrar tus cuentas personales de forma rápida y segura. Controla tus movimientos y mantén tus finanzas al día.</p>
+
+    <ion-button expand="block" color="success" (click)="listarCuentas()">Listar Cuentas</ion-button>
+    <ion-button expand="block" color="tertiary" (click)="nuevaCuenta()">Agregar Cuenta</ion-button>
+  </div>
+
+  <ion-footer>
+    <p>© 2025 MiGestorApp - Tu control financiero al día</p>
+  </ion-footer>
+</ion-content>

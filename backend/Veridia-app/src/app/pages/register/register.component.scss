@@ -1,0 +1,63 @@
+.register-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(180deg, #f9faff 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+.header {
+  margin-top: 30px;
+}
+
+.icon {
+  font-size: 60px;
+  color: #22c55e;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #222;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+ion-item {
+  margin-bottom: 14px;
+  --highlight-color-focused: #22c55e;
+}
+
+.guardar-btn {
+  margin-top: 18px;
+  --border-radius: 10px;
+  font-weight: bold;
+  --background: #22c55e;
+  --background-activated: #16a34a;
+  --box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+.volver-login {
+  margin-top: 25px;
+  color: #555;
+}
+
+.volver-login p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.bottom-image {
+  margin-top: 30px;
+}
+
+.bottom-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}

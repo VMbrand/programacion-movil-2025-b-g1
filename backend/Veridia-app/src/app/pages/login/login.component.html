@@ -1,0 +1,38 @@
+<ion-content class="login-page ion-padding">
+  <!-- Encabezado -->
+  <div class="header">
+    <ion-icon name="wallet-outline" class="app-icon"></ion-icon>
+    <h1>Control de Cuentas</h1>
+    <p>Organiza tus ingresos y gastos fácilmente 📊</p>
+  </div>
+
+  <!-- Formulario -->
+  <form (ngSubmit)="login()" class="login-form">
+    <ion-item lines="full">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input [(ngModel)]="usuario.nombre" name="nombre" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="usuario.contrasena" name="contrasena" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="primary" type="submit" class="login-btn">
+      Iniciar Sesión
+    </ion-button>
+  </form>
+
+  <!-- Enlace de registro -->
+  <div class="register-container">
+    <p>¿No tienes una cuenta?</p>
+    <ion-button fill="clear" color="success" (click)="goToRegistro()">
+      Crear una cuenta
+    </ion-button>
+  </div>
+
+  <!-- Imagen inferior -->
+  <div class="bottom-image">
+    <img src="assets/img/money-illustration.svg" alt="Control financiero" />
+  </div>
+</ion-content>

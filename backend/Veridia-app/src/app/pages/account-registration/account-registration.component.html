@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Registrar Nueva Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form (ngSubmit)="guardarCuenta()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="nuevaCuenta.nombre" name="nombre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha</ion-label>
+      <ion-datetime display-format="YYYY-MM-DD" [(ngModel)]="nuevaCuenta.fecha" name="fecha" required></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea [(ngModel)]="nuevaCuenta.descripcion" name="descripcion" required></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Valor</ion-label>
+      <ion-input type="number" [(ngModel)]="nuevaCuenta.valor" name="valor" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" class="guardar-btn" (click)="guardarCuenta()">
+      Guardar Cuenta
+    </ion-button>
+  </form>
+
+  <ion-list *ngIf="cuentasGuardadas.length > 0" class="cuentas-list">
+    <ion-list-header>
+      <ion-label>📋 Cuentas Registradas</ion-label>
+    </ion-list-header>
+
+    <ion-item *ngFor="let cuenta of cuentasGuardadas">
+      <ion-label>
+        <h2>{{ cuenta.nombre }}</h2>
+        <p><strong>Fecha:</strong> {{ cuenta.fecha }}</p>
+        <p><strong>Descripción:</strong> {{ cuenta.descripcion }}</p>
+        <p><strong>Valor:</strong> ${{ cuenta.valor }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title size="small" class="footer-text">© 2025 MiGestorApp</ion-title>
+  </ion-toolbar>
+</ion-footer>

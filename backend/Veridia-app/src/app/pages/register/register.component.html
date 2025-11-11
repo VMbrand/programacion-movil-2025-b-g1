@@ -1,0 +1,53 @@
+<ion-content class="register-page ion-padding">
+  <div class="header">
+    <ion-icon name="person-add-outline" class="icon"></ion-icon>
+    <h1>Crear cuenta</h1>
+    <p>Regístrate para empezar a gestionar tus cuentas 💰</p>
+  </div>
+
+  <form (ngSubmit)="guardarUsuario()">
+    <ion-item>
+      <ion-label position="floating">Nombre completo</ion-label>
+      <ion-input [(ngModel)]="usuario.nombreCompleto" name="nombreCompleto" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="usuario.correo" name="correo" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre de usuario</ion-label>
+      <ion-input [(ngModel)]="usuario.nombreUsuario" name="nombreUsuario" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Género</ion-label>
+      <ion-select [(ngModel)]="usuario.genero" name="genero" placeholder="Seleccione uno" required>
+        <ion-select-option value="Masculino">Masculino</ion-select-option>
+        <ion-select-option value="Femenino">Femenino</ion-select-option>
+        <ion-select-option value="Otro">Otro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="usuario.contrasena" name="contrasena" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" type="submit" class="guardar-btn">
+      Guardar
+    </ion-button>
+  </form>
+
+  <div class="volver-login">
+    <p>¿Ya tienes una cuenta?</p>
+    <ion-button fill="clear" color="primary" routerLink="/login">
+      Iniciar sesión
+    </ion-button>
+  </div>
+
+  <div class="bottom-image">
+    <img src="assets/img/register-illustration.svg" alt="Registro" />
+  </div>
+</ion-content>
